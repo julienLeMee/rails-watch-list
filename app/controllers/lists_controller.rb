@@ -21,6 +21,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to @list, status: 303
+  end
+
   private
 
   def list_params
