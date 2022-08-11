@@ -1,9 +1,11 @@
 <h1 class="m-3">My list</h1>
 
-<div>
-  <% @lists.each do |list| %>
-    <h3 class="m-3"><%= link_to list.name, list_path(list) %></h3>
-  <% end %>
+<div class="cards mt-3">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <h3 class="m-3"><%= link_to list.name, list_path(list) %></h3>
+      </div>
+    <% end %>
 </div>
 
-<p class="m-3">➕ <%= link_to "New", new_list_path %></p>
+<p class="m-3 btn btn-warning">➕ <%= link_to "New", new_list_path %></p>
