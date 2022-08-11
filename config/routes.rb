@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'bookmarks/new'
+  get 'bookmarks/create'
+  get 'bookmarks/destroy'
   get 'lists/index'
   get 'lists/show'
   get 'lists/new'
