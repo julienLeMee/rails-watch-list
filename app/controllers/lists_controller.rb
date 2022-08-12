@@ -4,12 +4,11 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
-  def show
-    raise
-  end
-
   def new
     @list = List.new
+  end
+
+  def show
   end
 
   def create

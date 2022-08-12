@@ -6,9 +6,9 @@
 </div>
 
   <div class="cards mt-3">
-      <% @movies.each do |movie| %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7234215/pexels-photo-7234215.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7234215.jpg&fm=jpg)">
-          <h3 class="m-3"><%= movie.title %></h3>
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/4722571/pexels-photo-4722571.jpeg?auto=compress&cs=tinysrgb&w=800)">
+          <h3 class="m-3"><%= bookmark.movie.title %></h3>
         </div>
       <% end %>
   </div>
@@ -20,3 +20,10 @@
     <%= link_to 'delete', list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Let's go!" }, class: 'card-remove-link' %>
   </div>
 </div>
+
+
+
+
+
+
+
