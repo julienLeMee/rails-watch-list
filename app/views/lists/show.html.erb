@@ -5,6 +5,14 @@
   </div>
 </div>
 
+  <div class="cards mt-3">
+      <% @movies.each do |movie| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7234215/pexels-photo-7234215.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7234215.jpg&fm=jpg)">
+          <h3 class="m-3"><%= movie.title %></h3>
+        </div>
+      <% end %>
+  </div>
+
   <div class="m-3 btn btn-success">
     <%= link_to "Back", root_path %>
   </div>
