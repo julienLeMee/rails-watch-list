@@ -1,9 +1,10 @@
+<div class="container">
+  <h2 class="m-5"><%=@list.name %></h2>
 
-<h2 class="m-5"><%=@list.name %></h2>
-
-<div class="m-3 btn btn-success">
-  <%= link_to "Back", root_path %>
-</div>
-<div class="m-3 btn btn-warning">
-  <%= link_to 'delete', list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Let's go!" }, class: 'card-remove-link' %>
+  <div class="m-3 btn btn-success">
+    <%= link_to "Back", root_path %>
+  </div>
+  <div class="m-3 btn btn-warning">
+    <%= link_to 'delete', list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Let's go!" }, class: 'card-remove-link' %>
+  </div>
 </div>
