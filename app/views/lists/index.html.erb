@@ -1,17 +1,20 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3709370/pexels-photo-3709370.jpeg?auto=compress&cs=tinysrgb&w=800);">
-  <div class="container m-3 text-center">
-    <h1 class="display-1">Welcome to My list!</h1>
+  <div class="m-3 text-center">
+    <p><span data-controller="typed-js"></span></p>
+    <h1 class="title">Welcome to My list!</h1>
     <p>Take a popcorn bucket ! 🍿</p>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
 
-<p class="m-3 btn btn-ghost">+ <%= link_to "Add list", new_list_path %></p>
+<div class="container">
+  <p class="m-3 btn btn-ghost">+ <%= link_to "Add list", new_list_path %></p>
 
-<div class="cards mt-3">
-    <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7234215/pexels-photo-7234215.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7234215.jpg&fm=jpg)">
-        <h3 class="m-3"><%= link_to list.name, list_path(list) %></h3>
-      </div>
-    <% end %>
+  <div class="cards mt-3">
+      <% @lists.each do |list| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7234215/pexels-photo-7234215.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-7234215.jpg&fm=jpg)">
+          <h3 class="m-3"><%= link_to list.name, list_path(list) %></h3>
+        </div>
+      <% end %>
+  </div>
 </div>
