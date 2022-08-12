@@ -1,4 +1,10 @@
-<h1 class="m-3">My list</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/3709370/pexels-photo-3709370.jpeg?auto=compress&cs=tinysrgb&w=800);">
+  <div class="container m-3">
+    <h1>Welcome to My list!</h1>
+    <p>Take a popcorn bucket.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
 
 <div class="cards mt-3">
     <% @lists.each do |list| %>
@@ -8,4 +14,4 @@
     <% end %>
 </div>
 
-<p class="m-3 btn btn-warning">➕ <%= link_to "New", new_list_path %></p>
+<p class="m-3 btn btn-ghost"><%= link_to "Add list", new_list_path %></p>
