@@ -1,22 +1,19 @@
-<%
-=begin %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon px-3">
+  <%= link_to root_path do %>
+    <%= image_tag "https://lrmonline.com/wp-content/uploads/2021/01/image002.png", alt: "alttext", class: "logo" %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top"
-  data-controller="navbar"
-  data-action="scroll@window->navbar#updateNavbar">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="https://lrmonline.com/wp-content/uploads/2021/01/image002.png" />
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <%= link_to "My WatchList", root_path, class: "nav-link" %>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item active">
+        <%= link_to "My lists", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "New list", new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
   </div>
 </div>
-
-<%
-=end %>
