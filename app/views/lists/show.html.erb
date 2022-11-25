@@ -45,19 +45,18 @@
   </div>
 <div class="container mb-5">
   <div class="row my-2">
-    <% @list.movies.each do |movie| %>
-      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+    <% @list.bookmarks.each do |bookmark| %>
       <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
         <div class="bg-white rounded shadow h-100">
-          <%= image_tag movie.poster_url, alt: movie.title, class: "movie-img rounded-top w-100" %>
+          <%= image_tag bookmark.movie.poster_url, alt: bookmark.movie.title, class: "movie-img rounded-top w-100" %>
           <div class="p-3 rounded-bottom d-flex flex-column">
-            <strong><span class="font-black"><%= movie.title %></span> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
-            <small class="text-muted"><%= movie.overview %></small>
+            <strong><span class="font-black"><%= bookmark.movie.title %></span> <span class="text-muted font-weight-normal">• <%= bookmark.movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
+            <small class="text-muted"><%= bookmark.movie.overview %></small>
             <div class="d-flex align-items-end justify-content-between pt-4">
               <div>
                 <i class="fas fa-quote-left me-2"></i><small class="flex-grow-1"><%= bookmark.comment %></small>
               </div>
-              <small class="text-right flex-shrink-0"><%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
+              <small class="text-right flex-shrink-0"><%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{bookmark.movie.title} from your #{@list.name} list"}, class: 'text-danger' %></small>
             </div>
           </div>
         </div>
