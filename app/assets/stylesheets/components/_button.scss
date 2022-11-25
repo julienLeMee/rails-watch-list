@@ -1,5 +1,5 @@
 .btn-info:hover {
-  border: 1px solid #fff;
+  text-decoration: underline;
 }
 
 .btn-flat {
@@ -38,4 +38,20 @@
 .link:hover {
   color: #333;
   text-decoration: none;
+}
+
+.navbar-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 16px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+.btn-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end
 }
