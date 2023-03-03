@@ -1,0 +1,17 @@
+current directory: /Users/julienlemee/code/julienLeMee/rails-watch-list/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+/Users/julienlemee/.rbenv/versions/3.1.2/bin/ruby -I /Users/julienlemee/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230109-50047-2rpowc.rb extconf.rb
+creating Makefile
+
+current directory: /Users/julienlemee/code/julienLeMee/rails-watch-list/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/julienlemee/code/julienLeMee/rails-watch-list/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/julienlemee/code/julienLeMee/rails-watch-list/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20230109-50047-40mxjt/debug
